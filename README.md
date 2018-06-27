@@ -1,6 +1,8 @@
 # docker-mac-php-performance
 Using native PHP with dockerized services (e.g. nginx) as a way to deal with bind mounts performance problem on docker-for-mac
 
+See [an article](https://medium.com/@arturvesker/os-x-docker-nginx-native-php-performance-that-we-deserve-7f5de623a873) for more info
+
 # Configs
 * `docker-compose.yml` - basic config
 * `docker-compose.prod.yml` - The default way of running php apps using docker. Everything in containers
@@ -29,7 +31,6 @@ Start docker-compose with production config
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --force-recreate --remove-orphans
 ```
 Check results [http://localhost:8080/app_dev.php](http://localhost:8080/app_dev.php)
-rm
 # Results
 How long it takes to load Symfony 3.4 default homepage on PHP 7.2 with warm cache.
 
