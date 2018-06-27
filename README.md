@@ -9,7 +9,7 @@ Using native PHP with dockerized services (e.g. nginx) as a way to deal with bin
 # Set up
 1. Install native php 7.2 `brew install php72`
 2. Download [Composer](https://getcomposer.org/)
-3. Install dependencies `composer install`
+3. Install dependencies `php composer.phar install`
 
 
 # Native php + dockerized nginx
