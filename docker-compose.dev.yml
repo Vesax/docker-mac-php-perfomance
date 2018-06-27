@@ -1,0 +1,10 @@
+version: '3'
+services:
+    nginx:
+        volumes:
+            - ./web:${PWD}/web
+            - ./nginx/default.dev.conf.template:/default.dev.conf.template
+        environment:
+            - WEB_DIR=${PWD}/web
+            - PHP_FPM=host.docker.internal:9000
+        command: /bin/bash -c "envsubst '$${WEB_DIR} $${PHP_FPM}' < /default.dev.conf.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"
